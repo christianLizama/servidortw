@@ -4,6 +4,7 @@ import cors from 'cors'; // Debes importar 'cors' antes de usarlo
 import dotenv from 'dotenv';
 // Rutas
 import router from './routes/index.js';
+import producto from './routes/producto.js';
 
 // Configura dotenv para cargar las variables de entorno desde el archivo .env
 dotenv.config({ path: './src/.env'});
@@ -18,6 +19,9 @@ app.use(express.json());
 
 // Luego, configura tus rutas
 app.use('/', router);
+app.use('/producto', producto);
+
+
 
 app.listen(port, () => {
   console.log(`El servidor está escuchando en el puerto ${port}`);

@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import router from './routes/index.js';
 import producto from './routes/producto.js';
 import tarea from './routes/tarea.js';
+import user from './routes/user.js';
 
 // Configura dotenv para cargar las variables de entorno desde el archivo .env
 dotenv.config({ path: './src/.env'});
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use('/', router);
 app.use('/producto', producto);
 app.use('/tarea', tarea);
+app.use('/user', user);
 
 app.listen(port, () => {
   console.log(`El servidor está escuchando en el puerto ${port}`);

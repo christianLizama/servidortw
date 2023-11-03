@@ -7,7 +7,7 @@ export const crearProducto = async (req, res) => {
     try {
         const producto = new Producto(req.body);
         await producto.save();
-        res.status(200).json(producto);
+        res.status(201).json(producto);
     } catch (error) {
         res.status(500).json({ mensaje: error.message });
     }

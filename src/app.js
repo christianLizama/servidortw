@@ -19,6 +19,7 @@ app.use(express.json());
 // Luego, configura tus rutas
 app.use('/', router);
 
+
 app.listen(port, () => {
   console.log(`El servidor está escuchando en el puerto ${port}`);
 });
